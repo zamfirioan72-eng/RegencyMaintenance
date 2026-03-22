@@ -1,0 +1,84 @@
+<Page
+    x:Class="RegencyMaintenance.Views.LoginPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="#2C3E50">
+
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Logo/Title -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,32" HorizontalAlignment="Center">
+            <TextBlock Text="🏨" FontSize="64" HorizontalAlignment="Center"/>
+            <TextBlock Text="THE REGENCY MAINTENANCE"
+                       FontSize="28" FontWeight="Bold"
+                       Foreground="White"
+                       HorizontalAlignment="Center"
+                       Margin="0,8,0,4"/>
+            <TextBlock Text="Sistema Gestione Manutenzione"
+                       FontSize="14"
+                       Foreground="#BDC3C7"
+                       HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <!-- Login Box -->
+        <Border Grid.Row="1"
+                Background="#34495E"
+                CornerRadius="12"
+                Padding="48,36"
+                MinWidth="400"
+                BorderBrush="#3498DB"
+                BorderThickness="2">
+            <StackPanel Spacing="20">
+                <TextBlock Text="Accesso Operatore"
+                           FontSize="20" FontWeight="SemiBold"
+                           Foreground="White"
+                           HorizontalAlignment="Center"/>
+
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Nome Operatore:"
+                               Foreground="#BDC3C7"
+                               FontSize="14"/>
+                    <TextBox x:Name="OperatorNameBox"
+                             PlaceholderText="Inserisci il tuo nome..."
+                             Background="#2C3E50"
+                             Foreground="White"
+                             BorderBrush="#3498DB"
+                             BorderThickness="2"
+                             Padding="12,10"
+                             FontSize="16"
+                             CornerRadius="6"
+                             KeyDown="OperatorNameBox_KeyDown"/>
+                </StackPanel>
+
+                <Button x:Name="LoginButton"
+                        Content="ENTRA"
+                        Background="#2980B9"
+                        Foreground="White"
+                        FontSize="16" FontWeight="Bold"
+                        HorizontalAlignment="Stretch"
+                        Padding="16,14"
+                        CornerRadius="6"
+                        Click="LoginButton_Click"/>
+
+                <TextBlock x:Name="LastOperatorText"
+                           Foreground="#7F8C8D"
+                           FontSize="12"
+                           HorizontalAlignment="Center"
+                           Visibility="Collapsed"/>
+
+                <TextBlock x:Name="ErrorText"
+                           Foreground="#E74C3C"
+                           FontSize="13"
+                           HorizontalAlignment="Center"
+                           Visibility="Collapsed"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>
