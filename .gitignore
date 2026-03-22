@@ -1,0 +1,21 @@
+# Build artifacts
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.cache
+*.log
+TestResults/
+
+# NuGet
+packages/
+*.nupkg
+
+# Output
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.exp
+*.lib
